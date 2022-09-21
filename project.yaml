@@ -1,0 +1,13 @@
+kind: project
+metadata:
+  name: test-schedule
+spec:
+  functions:
+  - url: db://gilad-testing/add-2
+    name: add-2
+  workflows:
+  - path: workflow.py
+    name: testing
+  artifacts: []
+  source: ''
+  desired_state: online
