@@ -1,6 +1,7 @@
 kind: project
 metadata:
-  name: test-schedule
+  name: test-schedule-1
+  created: '2022-09-21T12:22:16.741000'
 spec:
   functions:
   - url: db://gilad-testing/add-2
@@ -8,6 +9,11 @@ spec:
   workflows:
   - path: workflow.py
     name: testing
+    schedule: '*/10 * * * *'
   artifacts: []
-  source: ''
+  source: https://github.com/GiladShapira94/test
+  load_source_on_run: false
   desired_state: online
+  owner: shapira
+status:
+  state: online
