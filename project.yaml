@@ -14,5 +14,3 @@ spec:
   source: https://github.com/GiladShapira94/test
   load_source_on_run: false
   desired_state: online
-status:
-  state: online
