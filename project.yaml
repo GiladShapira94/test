@@ -4,7 +4,10 @@ metadata:
   created: '2022-09-21T12:22:16.741000'
 spec:
   functions:
-  - url: db://gilad-testing/add-2
+  - url: func.py
+    image: mlrun/mlrun
+    kind: job
+    handler: func
     name: add-2
   workflows:
   - path: workflow.py
