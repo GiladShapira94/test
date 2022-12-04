@@ -14,6 +14,5 @@ spec:
     name: testing
     schedule: '*/10 * * * *'
   artifacts: []
-  source: https://github.com/GiladShapira94/test
   load_source_on_run: false
   desired_state: online
