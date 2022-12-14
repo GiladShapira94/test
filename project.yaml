@@ -1,6 +1,6 @@
 kind: project
 metadata:
-  name: test-schedule-1
+  name: test-clone-2
   created: '2022-09-21T12:22:16.741000'
 spec:
   functions:
@@ -14,5 +14,7 @@ spec:
     name: testing
     schedule: '*/10 * * * *'
   artifacts: []
+  source: git://github.com/GiladShapira94/test.git
+  origin_url: git://github.com/GiladShapira94/test.git
   load_source_on_run: false
   desired_state: online
