@@ -1,7 +1,7 @@
 kind: project
 metadata:
   name: test-clone-2
-  created: '2022-09-21T12:22:16.741000'
+  created: '2022-12-14T11:50:09.753000'
 spec:
   functions:
   - url: func.py
@@ -14,7 +14,10 @@ spec:
     name: testing
     schedule: '*/10 * * * *'
   artifacts: []
-  source: git://github.com/GiladShapira94/test.git
-  origin_url: git://github.com/GiladShapira94/test.git
+  source: git://github.com/GiladShapira94/test.git#refs/heads/master
+  origin_url: git://github.com/GiladShapira94/test.git#refs/heads/master
   load_source_on_run: false
   desired_state: online
+  owner: shapira
+status:
+  state: online
