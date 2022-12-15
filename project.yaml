@@ -18,6 +18,3 @@ spec:
   origin_url: git://github.com/GiladShapira94/test.git#refs/heads/master
   load_source_on_run: false
   desired_state: online
-  owner: shapira
-status:
-  state: online
