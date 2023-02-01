@@ -1,14 +1,14 @@
 kind: project
 metadata:
-  name: test-clone-2
+  name: schedule-shapira
   created: '2022-12-14T11:50:09.753000'
 spec:
   functions:
-  - url: func.py
-    image: mlrun/mlrun
+  - name: add-2
     kind: job
-    handler: func
-    name: add-2
+    image: mlrun/mlrun
+    handler: func.func
+    with_repo: true
   workflows:
   - path: workflow.py
     name: testing
