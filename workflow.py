@@ -18,4 +18,4 @@ def init_functions(functions: dict, project=None, secrets=None):
 
 def kfpipeline():
     
-    serving = funcs['add-2'].as_step()
+    serving = funcs['add-2'].as_step(auto_build=True)
