@@ -1,19 +1,20 @@
 kind: project
 metadata:
-  name: schedule-shapira
+  name: schedule-admin
   created: '2022-12-14T11:50:09.753000'
 spec:
   functions:
-  - name: add-2
+  - url: func.py
+    name: add-2
     kind: job
     image: mlrun/mlrun
-    handler: func.func
+    handler: func
   workflows:
   - path: workflow.py
     name: testing
     schedule: '*/10 * * * *'
   artifacts: []
-  source: git://github.com/GiladShapira94/test.git
-  origin_url: git://github.com/GiladShapira94/test.git
+  source: git://github.com/GiladShapira94/test.git#refs/heads/master
+  origin_url: git://github.com/GiladShapira94/test.git#refs/heads/master
   load_source_on_run: false
   desired_state: online
