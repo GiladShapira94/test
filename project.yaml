@@ -8,7 +8,6 @@ spec:
     kind: job
     image: mlrun/mlrun
     handler: func.func
-    with_repo: true
   workflows:
   - path: workflow.py
     name: testing
