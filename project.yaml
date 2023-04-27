@@ -1,20 +1,17 @@
 kind: project
 metadata:
-  name: schedule-admin
-  created: '2022-12-14T11:50:09.753000'
+  name: testing-shapira
+  created: '2023-04-27T09:49:57.799000'
 spec:
   functions:
-  - url: func.py
-    name: add-2
-    kind: job
-    image: mlrun/mlrun
-    handler: func
-  workflows:
-  - path: workflow.py
-    name: testing
-    schedule: '*/10 * * * *'
+  - name: serving-test
+    handler: function-serving.yaml
+  workflows: []
   artifacts: []
+  conda: ''
   source: git://github.com/GiladShapira94/test.git#refs/heads/master
-  origin_url: git://github.com/GiladShapira94/test.git#refs/heads/master
-  load_source_on_run: false
+  load_source_on_run: true
   desired_state: online
+  owner: shapira
+status:
+  state: online

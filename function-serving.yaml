@@ -1,0 +1,44 @@
+kind: serving
+metadata:
+  name: serving-test
+  hash: bc5bf7c37d3d1564018037c64ff6aefb9af7d59c
+  project: testing-shapira
+spec:
+  command: ''
+  args: []
+  image: mlrun/mlrun
+  build:
+    functionSourceCode: CmRlZiBjaGVjayhib2R5KToKICAgIAogICAgcmV0dXJuIGJvZHkgCgpmcm9tIG1scnVuLnJ1bnRpbWVzIGltcG9ydCBudWNsaW9faW5pdF9ob29rCmRlZiBpbml0X2NvbnRleHQoY29udGV4dCk6CiAgICBudWNsaW9faW5pdF9ob29rKGNvbnRleHQsIGdsb2JhbHMoKSwgJ3NlcnZpbmdfdjInKQoKZGVmIGhhbmRsZXIoY29udGV4dCwgZXZlbnQpOgogICAgcmV0dXJuIGNvbnRleHQubWxydW5faGFuZGxlcihjb250ZXh0LCBldmVudCkK
+    commands: []
+    code_origin: https://github.com/GiladShapira94/test.git#5770084ba27b366906423d4eae676dd8e24f0604:test/serving-test.py
+    origin_filename: test/serving-test.py
+  description: ''
+  default_handler: ''
+  disable_auto_mount: false
+  env: []
+  resources:
+    requests:
+      memory: 1Mi
+      cpu: 25m
+    limits:
+      memory: 20Gi
+      cpu: '2'
+  priority_class_name: igz-workload-medium
+  preemption_mode: prevent
+  min_replicas: 1
+  max_replicas: 4
+  source: ''
+  function_kind: serving_v2
+  function_handler: serving-test:handler
+  base_image_pull: false
+  graph:
+    steps:
+      step:
+        kind: task
+        handler: check
+        after: []
+  secret_sources: []
+  affinity: null
+  tolerations: null
+  security_context: {}
+verbose: false
